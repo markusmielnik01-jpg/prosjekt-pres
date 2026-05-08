@@ -1,9 +1,207 @@
-*{
+:root {
+    --blue: rgb(198, 223, 246);
+    --bg: rgb(175, 118, 27);
+    --text: rgba(255, 255, 255, 0.705);
+
+
+}
+
+h1{
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 50px;
+    background-color: var(--bg);
+}
+
+h2{
+    font-size: 30px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: var(--blue);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img{
+.logo {
     display: block;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--blue);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.trekkspill-box {
+    display: none;
+
+}
+
+
+.main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 90vh;
+    width: 100%;
+}
+
+.container-main {
+    display: flex;
+    height: 90vh;
+    width: 80%;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.oppskrifter {
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.oppskrift-imgs {
+    display: block;
+    border-radius: 50px;
+    width: 200px;
+}
+
+.oppskrift{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--bg);
+    border-radius: 40px;
+    text-align: center;
+}
+
+
+@media(width < 700px){
+    .oppskrifter{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        gap: 100px;
+        padding-bottom: 50px;
+    }
+
+    .container-main{
+        padding-top: 50px;
+        gap: 100px;
+    }
+
+    .oppskrift{
+        width: 300px;
+    }
+
+    nav{
+        position: relative;
+    }
+
+    ul{
+        position: absolute;
+        left: -2000px;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        background-color: var(--bg);
+        height: 100vh;
+        border-radius: 0 30px 30px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trekkspill-box{
+        display: block;
+        font-size: 30px;
+    }
+
+    .x{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+        width: 30px;
+    }
+
+    .x.active{
+        display: block;
+        width: 40px;
+    }
+
+    .burger.active{
+        display: none;
+    }
+
+    ul.active{
+        left: 0;
+        top: 0;
+        position:fixed;
+    }
 }
