@@ -6,14 +6,14 @@
 
 }
 
-h1{
+h1 {
     padding: 30px;
     border-radius: 30px;
     font-size: 50px;
     background-color: var(--bg);
 }
 
-h2{
+h2 {
     font-size: 30px;
 }
 
@@ -126,9 +126,9 @@ a:hover {
     width: 200px;
 }
 
-.oppskrift{
+.oppskrift {
     width: 40%;
-    height: 300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,9 +139,36 @@ a:hover {
     text-align: center;
 }
 
+.boller-link:hover,
+.cookies-link:hover {
+    text-decoration: none;
+}
 
-@media(width < 700px){
-    .oppskrifter{
+.boller-link,
+.cookies-link {
+    width: 40%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--bg);
+    border-radius: 40px;
+    text-align: center;
+
+    transition: 0s;
+}
+
+
+@media(width < 780px) {
+
+    .boller-link,
+    .cookies-link {
+        width: 75%;
+    }
+
+    .oppskrifter {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -150,20 +177,20 @@ a:hover {
         padding-bottom: 50px;
     }
 
-    .container-main{
+    .container-main {
         padding-top: 50px;
         gap: 100px;
     }
 
-    .oppskrift{
-        width: 300px;
+    .oppskrift {
+        width: 75%;
     }
 
-    nav{
+    nav {
         position: relative;
     }
 
-    ul{
+    ul {
         position: absolute;
         left: -2000px;
         display: flex;
@@ -171,37 +198,50 @@ a:hover {
         width: 40%;
         background-color: var(--bg);
         height: 100vh;
-        border-radius: 0 30px 30px 0;
+        border-radius: 0 0 200px 0;
         justify-content: center;
         align-items: center;
+        gap: 150px;
+        font-size: 20px;
     }
 
-    .trekkspill-box{
+    .trekkspill-box {
         display: block;
         font-size: 30px;
     }
 
-    .x{
+    .trekkspill-box.active {
+        position: fixed;
+        top: 10vh;
+        left: 25%;
+
+    }
+
+    .x {
         display: none;
     }
 
-    .burger{
+    .burger {
         display: block;
         width: 30px;
     }
 
-    .x.active{
+    .x.active {
         display: block;
         width: 40px;
     }
 
-    .burger.active{
+    .burger.active {
         display: none;
     }
 
-    ul.active{
+    ul.active {
         left: 0;
         top: 0;
-        position:fixed;
+        position: fixed;
+    }
+
+    .logo.active {
+        position: fixed;
     }
 }
