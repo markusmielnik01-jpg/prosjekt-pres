@@ -1,0 +1,139 @@
+:root {
+    --blue: rgb(198, 223, 246);
+    --bg: rgb(176, 119, 28);
+    --text: rgba(255, 255, 255, 0.705);
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* nav */
+.logo {
+    display: block;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--blue);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.trekkspill-box {
+    display: none;
+
+}
+
+
+@media(width<780px) {
+    nav {
+        position: relative;
+    }
+
+    ul {
+        position: absolute;
+        left: -1000px;
+        display: flex;
+        top: 0;
+        flex-direction: column;
+        width: 40%;
+        background-color: var(--bg);
+        height: 100vh;
+        border-radius: 0 0 200px 0;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+        font-size: 20px;
+
+        transition: 1s;
+    }
+
+    .trekkspill-box {
+        display: block;
+        font-size: 30px;
+    }
+
+     .trekkspill-box.active {
+        position: fixed;
+        top: 20px;
+        right: 45px;
+
+    } 
+
+    .x {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        width: 30px;
+    }
+
+    .x.active {
+        display: block;
+        width: 40px;
+        position: fixed;
+        top: 20px;
+        right: 10%;
+
+    }
+
+    .burger.active {
+        display: none;
+    }
+
+    ul.active {
+        left: 0;
+        top: 0;
+        position: fixed;
+
+        transition: 1s;
+    }
+
+    .logo.active {
+        position: fixed;
+    }
+}

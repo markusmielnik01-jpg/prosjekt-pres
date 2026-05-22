@@ -5,6 +5,7 @@
 
 
 }
+
 h1 {
     padding: 30px;
     border-radius: 30px;
@@ -27,9 +28,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    overflow: hidden;
 
     background-color: var(--blue);
 }
@@ -99,6 +99,8 @@ a:hover {
     margin: 0 auto;
     min-height: 90vh;
     width: 100%;
+
+    position: relative;
 }
 
 .container-main {
@@ -162,7 +164,6 @@ a:hover {
 
 
 @media(width < 780px) {
-
     .boller-link,
     .cookies-link {
         width: 75%;
@@ -192,7 +193,8 @@ a:hover {
 
     ul {
         position: absolute;
-        left: -2000px;
+        left: -1000px;
+        top: 0;
         display: flex;
         flex-direction: column;
         width: 40%;
@@ -203,6 +205,8 @@ a:hover {
         align-items: center;
         gap: 150px;
         font-size: 20px;
+        transition: 1s;
+        z-index: 8;
     }
 
     .trekkspill-box {
@@ -211,10 +215,10 @@ a:hover {
     }
 
     .trekkspill-box.active {
-        position: fixed;
-        top: 10vh;
-        left: 25%;
+        top: 20px;
+        right: 50px;
 
+        transition: 1s;
     }
 
     .x {
@@ -229,6 +233,9 @@ a:hover {
     .x.active {
         display: block;
         width: 40px;
+        position: fixed;
+        right: 10%;
+        top: 20px;
     }
 
     .burger.active {
@@ -238,6 +245,7 @@ a:hover {
     ul.active {
         left: 0;
         top: 0;
+        height: 100vh;
         position: fixed;
     }
 
