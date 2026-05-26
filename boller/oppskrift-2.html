@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="/prosjekt-pres/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -25,7 +26,18 @@
         </div>
     </nav>
 
-
+    <div class="main">
+        <div class="gamebox">
+            <h2>Antall cookies: <span id="antallCookies">0</span></h2>
+            <img src="/prosjekt-pres/media/ckcookie.png" alt="" class="cookie-click">
+            <button id="shop">Oppgrader</button>
+        </div>
+        <div class="shopbox">
+            <button id="oppgrader">Kjøp dobbel cookie-inntekt for <span id="pris">100</span> cookies <i class="fa-regular fa-hand-point-up"></i></button>
+            <img class="x-shop" src="/prosjekt-pres/media/cross-small-svgrepo-com.svg" alt="">
+        </div>
+        <div class="info"><h2>Nåværende cookie-inntekt per klikk: <span class="current"></span></h2></div>
+    </div>
 
 
     <script src="script2.js"></script>
