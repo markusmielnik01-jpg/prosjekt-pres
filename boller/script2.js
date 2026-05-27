@@ -33,7 +33,7 @@ let cost = 100
 currentEl.innerHTML = rate
 
 cookieEl.addEventListener("click", function () {
-    antallCookies = antallCookies + 1 * rate
+    antallCookies = Math.floor(antallCookies + 1 * rate)
     counterEl.innerHTML = antallCookies
 })
 
@@ -60,7 +60,7 @@ upgradeBtn.addEventListener("click", function () {
         rate = rate * 2
         currentEl.innerHTML = rate
         antallCookies = antallCookies - cost
-        cost = cost * 1.5
+        cost = Math.floor(cost * 1.5)
         prisEl.innerHTML = Math.floor(cost)
     }
 })
